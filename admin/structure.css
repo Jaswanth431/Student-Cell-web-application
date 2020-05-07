@@ -1,0 +1,864 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&display=swap");
+
+/****** basic styling for overall page***********/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: roboto, arial;
+    font-weight: 400;
+    color: #333;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+.pre-load {
+    transition: none;
+    animation: none;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/********header/Navigation stylings****************/
+
+header {
+    height: 5rem;
+    background-image: #e6e6e6;
+    box-shadow: 1rem 0 1rem 0.1rem rgba(0, 0, 0, 0.3);
+}
+
+.header-left-box {
+    display: flex;
+    align-self: center;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    float: left;
+}
+
+.header-left-box h1,
+.header-right-box h1 {
+    font-weight: 500;
+    font-size: 2rem;
+    margin: auto 1rem;
+}
+
+.logo-box {
+    height: 3rem;
+}
+
+.logo-box img {
+    height: 100%;
+}
+
+.toggle-icon {
+    display: none;
+    padding: 5px 7px;
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 1.6rem;
+    border-radius: 2px;
+    align-self: center;
+    margin-right: 1rem;
+    width: 3rem;
+    text-align: center;
+}
+
+.header-right-box {
+    display: flex;
+    float: right;
+    margin-top: 1rem;
+    margin-right: 2rem;
+}
+
+.user-box {
+    overflow: hidden;
+}
+
+.user-box img {
+    border-radius: 200px;
+}
+
+/*********main********/
+
+main {
+    display: flex;
+}
+
+.navigation-list {
+    min-height: calc(100vh - 7.5rem);
+    min-width: 23rem;
+    background-color: #fff;
+    text-align: center;
+    list-style: none;
+    padding: 3rem 2rem;
+    display: block;
+    box-shadow: 5px 0 3px rgba(0, 0, 0, 0.2);
+    position: relative;
+    border-top: 2px solid #dadada;
+    border-bottom: 2px solid #dadada;
+}
+.navigation-items {
+    margin-bottom: 2rem;
+}
+.navigation-items:last-child {
+    font-size: 100px;
+}
+
+.navigation-links:link,
+.navigation-links:visited {
+    display: block;
+    text-decoration: none;
+    color: #4caf50;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0.8rem 2rem;
+    border: 2px solid #4caf50;
+    border-radius: 10rem;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.navigation-links:hover {
+    background-color: #4caf50;
+    color: #fff;
+}
+.active {
+    background-color: #4caf50;
+    color: #fff !important;
+}
+/**************utilities**********************/
+.secondary-heading {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.margin-right {
+    margin-right: 2rem;
+}
+
+.margin-top-2 {
+    margin-top: 2rem;
+}
+.text-underline::after {
+    content: "";
+    display: block;
+    width: 20%;
+    margin: 0 auto;
+    border-bottom: 2px solid #111;
+}
+
+.hr-line {
+    height: 1px;
+    background-color: #222;
+    margin: 0 auto;
+}
+
+.select-element {
+    font-family: Roboto, Arial;
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    box-shadow: 0 5px 1rem 5px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.heading-primary {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.heading-underline {
+    border-bottom: 2px solid #333;
+    padding-bottom: 1rem;
+}
+
+.btn-light:link,
+.btn-light:visited {
+    display: block;
+    text-decoration: none;
+    color: #4caf50;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0.8rem 2rem;
+    border: 2px solid #4caf50;
+    border-radius: 10rem;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.btn-full {
+    text-decoration: none;
+    color: #fff;
+    background-color: #4caf50;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0.8rem 2rem;
+    border: 2px solid #4caf50;
+    border-radius: 5px;
+    box-shadow: 0 5px 1rem 5px rgba(0, 0, 0, 0.2);
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    min-width: 15rem;
+}
+
+.btn-full:active {
+    box-shadow: 0 2px 5rem 2px rgba(0, 0, 0, 0.2);
+}
+
+.content-box {
+    padding: 3rem;
+    flex-grow: 1;
+    text-align: center;
+    margin: 1.5rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.input-element {
+    width: 20rem;
+    padding: 1rem 1.5rem;
+    border-radius: 2px;
+    border: 1px solid #555;
+    outline: none;
+    font-size: 1.5rem;
+}
+
+.file-box {
+    width: 18rem;
+    height: 5rem;
+    overflow: hidden;
+}
+
+.table-box {
+    padding: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+    overflow-x: auto;
+    white-space: normal;
+}
+
+.table-box table {
+    font-size: 1.6rem;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+.table-box table td,
+.table-box table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.table-box table td i {
+    display: block;
+    font-size: 1.8rem;
+    color: #4caf50;
+    padding: 5px 5rem;
+    cursor: pointer;
+}
+
+.table-box table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table-box table tr:hover {
+    background-color: #ddd;
+}
+
+.table-box table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #4caf50;
+    color: white;
+}
+
+/**************results upload *****************/
+
+.edit-results-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-results-box select,
+.edit-results-box button {
+    width: 20rem;
+}
+
+.result-upload {
+    margin: 0 auto;
+}
+.bg-light {
+    background-color: #aaffaa;
+    padding: 1rem 1rem;
+    color: #000;
+    border-radius: 5px;
+}
+.upload-box {
+    margin: 3rem auto;
+    position: relative;
+}
+
+.file-upload-box {
+    position: absolute;
+    top: 0;
+    width: 18rem;
+    height: 5rem;
+    overflow: hidden;
+    left: 55rem;
+}
+.upload-box select {
+    margin-right: 2rem;
+    width: 15rem;
+    color: black;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 0.8rem 0.8rem;
+}
+
+.upload-box select:hover {
+    border-color: black;
+}
+.upload-box .btn-upload {
+    display: inline-box;
+    width: 15rem;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    margin-left: 19rem;
+}
+
+.custom-file-input {
+    color: transparent;
+    outline: none;
+}
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+.custom-file-input::before {
+    content: "Select File";
+    color: black;
+    width: 15rem;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 1.6rem;
+    padding: 1rem;
+    text-align: center;
+}
+.custom-file-input:hover::before {
+    border-color: black;
+}
+.custom-file-input:active {
+    outline: 0;
+}
+.custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+/* .error-box p {
+    color: red;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    display: inline-block;
+} */
+
+.display-error-box p {
+    color: red;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.hidden-error-box p {
+    display: none;
+    color: red;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+/**********reset password box *********/
+.reset-password-box {
+    font-family: roboto;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+}
+
+.reset-password-box form {
+    display: flex;
+}
+
+.btn-reset {
+    border-radius: 5px;
+}
+
+/***************************************************************************************
+sem data upload EX:sub, faculty
+***************************************************************************************/
+
+.subjects-upload-box,
+.faculty-upload-box {
+    position: reative;
+    display: inline-block;
+    margin: 2rem 0;
+}
+
+/********* add warden page*******************/
+
+.delete-warden-box {
+    margin-top: 2rem;
+}
+/********************student and admin-data upload****************************************
+
+******************************************************************************************/
+.student-box {
+    position: relative;
+    display: inline-block;
+    margin: 2rem 0;
+}
+
+.admin-box {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.admin_name,
+.admin_email,
+.admin_type,
+.student_id {
+    margin-right: 2rem;
+}
+
+/*******************get student button******/
+
+.id-input-box form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-img-box {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 100px;
+    text-align: center;
+    margin: 2rem auto;
+    overflow: hidden;
+}
+
+.profile-img-box img {
+    width: 100%;
+    height: 100%;
+}
+
+.student-data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.details-box {
+    margin-bottom: 2rem;
+    display: flex;
+    margin-right: 2rem;
+}
+
+.details-data {
+    display: block;
+    text-align: left;
+    width: 20rem;
+    background-color: #f5f5f5;
+    padding: 1.5rem;
+    margin-right: 2rem;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.details-heading {
+    display: block;
+    text-align: left;
+    width: 20rem;
+    padding: 1.5rem;
+    background-color: #4caf50;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.details-input {
+    display: block;
+    width: 20rem;
+    background-color: #f5f5f5;
+    padding: 1.5rem;
+    margin-right: 2rem;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+    border: 1px solid #f5f5f5;
+    font-weight: bold;
+}
+.details-input option {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+/*************survey results box ************/
+
+.survey-results-box {
+    padding: 2rem;
+}
+
+.survey-results-box table {
+    font-size: 1.6rem;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+.survey-results-box table td,
+.survey-results-box table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.survey-results-box table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.survey-results-box table tr:hover {
+    background-color: #ddd;
+}
+
+.survey-results-box table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #4caf50;
+    color: white;
+}
+
+/***********notification upload*******/
+.notification-box {
+    position: relative;
+    margin-top: 2rem;
+}
+
+.notification-box form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.notification-box input {
+    margin-right: 2rem;
+    width: 40rem;
+}
+
+.notification-box button {
+    margin-left: 25rem;
+}
+.notification-file-upload {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 18rem;
+    height: 5rem;
+    overflow: hidden;
+    left: 56rem;
+}
+
+/*******************get academic data**********/
+.academic-box {
+    margin-top: 2rem;
+}
+
+.sem-type {
+    text-align: left !important;
+    margin: 2rem 0 1rem 0;
+    font-size: 1.6rem;
+    background-color: #4caf50;
+    padding: 1rem;
+    display: inline-block;
+    color: #fff;
+}
+
+select,
+input[type="date"] {
+    background-color: #fff;
+    border: 1px solid #555;
+}
+/**************outpass requests box*********/
+.outpass-requests-box input,
+.outpass-requests-box select {
+    width: 14rem;
+}
+
+.outpass-requests-box .reason {
+    width: 30rem;
+}
+
+.outpass-requests-box button {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 1rem 5px rgba(0, 0, 0, 0.2);
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    z-index: 10;
+    min-width: 10rem;
+}
+
+.outing-date {
+    width: 20rem;
+}
+
+.outpass-requests-box button:active {
+    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.btn-approve {
+    border: 2px solid #4caf50;
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.btn-reject {
+    border: 2px solid #9c060e;
+    background-color: #9c060e;
+    color: #fff;
+}
+
+/********************approve outpass at security*******/
+.outpass-list-box,
+.out-of-campus-list-box {
+    margin: 2rem 0;
+}
+
+.outpass-list .table-box table td i,
+.out-of-campus-list .table-box table td i {
+    padding: 0;
+    color: #fff;
+}
+
+/**********outpass history*********/
+
+.outpass-history-box {
+    margin: 2rem 0;
+}
+
+/*************student statistic*********/
+.student-statistics-box {
+    margin: 2rem 0;
+}
+
+.student-statistics-box h2 {
+    width: 100%;
+}
+/***************footer***************/
+footer {
+    width: 100%;
+    background-color: #fff;
+    padding: 0.5rem;
+    /* margin-top: auto; */
+    box-shadow: 1rem 0 1rem 0.3rem rgba(0, 0, 0, 0.3);
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+.footer-left {
+    margin-left: 2rem;
+}
+
+.footer-right {
+    margin-right: 2rem;
+}
+
+.developer-data-box{
+    display:inline-block;
+    position: relative;
+}
+
+.footer-right a:hover + .developer-details{
+    display: flex;
+}
+
+.footer-right a:hover{
+    color:green;
+}
+.developer-details{
+    position:absolute;
+    bottom:2rem;
+    right:0;
+    padding: 1rem 2rem 2rem 2rem;
+    background-color: #fff;
+    border:2px solid #4caf50;
+    border-radius: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.developer-img-box{
+    width:10rem;
+    height:10rem;
+    border-radius:50%;
+    overflow:hidden;
+    margin-bottom:1rem;
+
+}
+
+.developer-details h2{
+    margin-bottom:1rem;
+    font-size:1.6rem;
+    text-decoration: underline;
+}
+
+.developer-details p{
+    margin-bottom:.5rem;
+}
+.developer-img-box img{
+    width: 100%;
+}
+
+/***************media queries*****************/
+@media screen and (max-width: 768px) {
+    .toggle-icon {
+        display: block;
+    }
+
+    .navigation-list {
+        min-width: 25rem;
+        min-height: calc(100vh - 9rem);
+        height: calc(100% - 5rem);
+        transition: all 0.3s;
+        position: absolute;
+        top: 5rem;
+        left: -25rem;
+        z-index: 50;
+    }
+    .side-nav {
+        left: 0;
+    }
+
+    .margin-right {
+        margin-right: 0;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        margin-top: auto;
+    }
+
+    .upload-box form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .upload-box {
+        z-index: 0;
+    }
+    .file-upload-box {
+        position: relative;
+        left: 0;
+    }
+
+    .btn-upload {
+        margin-left: 0;
+    }
+    /*utilities*/
+    .mb-1 {
+        margin-bottom: 1rem;
+    }
+
+    .notification-box form,
+    .reset-password-box form,
+    .edit-results-box {
+        flex-direction: column;
+    }
+
+    .notification-file-upload {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .notification-box button {
+        margin-left: 0;
+    }
+
+    .notification-box input {
+        width: 20rem;
+        margin-right: 0;
+    }
+    .table-box {
+        width: 30rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .table-box table {
+        width: 50rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-left-box h1,
+    .header-right-box h1 {
+        font-size: 1.3rem;
+        margin-left: 5px;
+    }
+
+    .header-left-box {
+        margin-left: 5px;
+        margin-right: 0;
+    }
+
+    .header-right-box {
+        margin-left: 0;
+    }
+
+    .content-box {
+        margin: 2rem 0;
+        padding: 0;
+    }
+
+    .id-input-box form {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .header-right-box {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
